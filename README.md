@@ -4,25 +4,16 @@ Remembra is a multi-screen music therapy application built with Expo, React Nati
 
 ## Table of Contents
 
-- [Features](#features)
 - [Folder Structure](#folder-structure)
 - [Installation & Setup](#installation--setup)
 - [Running the App](#running-the-app)
 - [Customization](#customization)
+- [Dependencies](#dependencies)
 - [Troubleshooting](#troubleshooting)
-
-## Features
-
-- **Multi-Screen Navigation:** Built with Expo Router using a folder-based route structure.
-- **Advanced Wizard Flow:** Includes screens for "Tell Us About Yourself", "Music & Memories", "Music Scene", "Did We Miss Something?", and more.
-- **Simple Setup:** A basic user input flow that leads to the main player screen.
-- **Main Player:** Features playback controls, album art, shuffle toggle, and navigation to the music library.
-- **Additional Screens:** Fine-Tune, My Profile, My Library, Settings, Account, and Explore screens.
-- **Pastel “Cutesy” Theme:** A shared style file (`styles.ts`) provides a consistent pastel UI throughout the app.
 
 ## Folder Structure
 
-The majority of the core files are organized under the `app/(tabs)` folder. For example:
+The core files are organized under the `app/(tabs)` folder. For example:
 
 ```
 remembra/
@@ -46,6 +37,7 @@ remembra/
 │       ├── account.tsx
 │       └── explore.tsx
 ├── package.json
+├── requirements.txt
 └── README.md
 ```
 
@@ -53,77 +45,120 @@ remembra/
 
 ## Installation & Setup
 
-1. **Clone the Repository:**
+1. **Install Node.js & npm (if not already installed):**
+   - Download and install Node.js from [https://nodejs.org](https://nodejs.org).
+   - Verify installation:
+     ```bash
+     node -v
+     npm -v
+     ```
 
+2. **Install Python 3 & pip (if not already installed):**
+   - Download and install Python from [https://www.python.org](https://www.python.org/downloads/).
+   - Verify installation:
+     ```bash
+     python3 --version
+     pip --version
+     ```
+
+3. **Clone the Repository:**
    ```bash
    git clone <repository-url>
    cd remembra
    ```
 
-2. **Install Dependencies:**
+4. **Create and Activate a Virtual Environment (Recommended for Python Dependencies):**
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate  # On macOS/Linux
+   venv\Scripts\activate     # On Windows
+   ```
 
-   Use npm or yarn to install the required packages:
-
+5. **Install JavaScript Dependencies:**
    ```bash
    npm install
    # or
    yarn install
    ```
 
-3. **Sync Expo Router (if needed):**
-
-   If you update your folder structure or add new routes, run:
-
+6. **Sync Expo Router (if needed):**
    ```bash
    npx expo-router sync
    ```
 
-4. **(Optional) Install Custom Fonts:**
+7. **Install Python Dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-   To use a custom font (e.g., Pacifico for a playful look):
-
+8. **(Optional) Install Custom Fonts:**
    ```bash
    npx expo install expo-font @expo-google-fonts/pacifico
    ```
 
-   Then load the font in your root layout or `App.js`.
-
 ## Running the App
 
-Start the Expo development server:
+1. **Start the Expo Development Server:**
+   ```bash
+   npx expo start
+   ```
+2. **Run the App on a Device:**
+   - Scan the QR code in the Expo CLI with the Expo Go app (Android/iOS)
+   - Or press `i` to open the iOS simulator, `a` for Android emulator.
 
-```bash
-npx expo start
-```
+3. **If Changes Don’t Appear, Clear Cache and Restart:**
+   ```bash
+   npx expo start -c
+   ```
 
-Use the Expo Go app on your mobile device or an emulator to run the app. If changes don’t appear, try clearing the cache:
+## Dependencies
 
-```bash
-npx expo start -c
-```
+- **Node.js & npm/yarn** (for running the frontend)
+- **Expo SDK** (for React Native development)
+- **Expo Router** (for navigation)
+- **Python 3.x** (if backend processing is needed)
+- **pip** (for managing Python dependencies)
+- **Virtual Environment (venv)** (Recommended for Python dependency management)
+- **Additional Python Libraries** (if applicable, listed in `requirements.txt`)
 
 ## Customization
 
 - **UI Theme:**  
-  All screens use the shared pastel theme defined in `app/(tabs)/styles.ts`. Modify colors, fonts, and other style properties there to suit your preferences.
+  Modify the pastel theme in `app/(tabs)/styles.ts` to change colors, fonts, and styles.
 
 - **Navigation:**  
-  The app uses Expo Router’s file-based routing. Routes are determined by the file and folder names under `app/(tabs)`. For example, the "Simple Setup" screen is in `app/(tabs)/simple-setup/index.tsx`.
+  The app uses Expo Router’s file-based routing. Modify files in `app/(tabs)` to change screen names and routes.
 
 - **Content & Logic:**  
-  Each screen contains basic placeholders (e.g., album art, user info, input fields). Replace these with your own logic and data as needed.
+  Replace placeholders (album art, user info, input fields) with actual logic as needed.
 
 ## Troubleshooting
 
 - **Route Not Found Errors:**  
-  Ensure your folder and file names match the paths used in your `router.push()` calls. If TypeScript complains about route types, you can use type overrides (e.g., `as any`) or run `npx expo-router sync`.
+  Ensure your folder and file names match the paths used in `router.push()` calls. If TypeScript complains, use `as any` or run:
+  ```bash
+  npx expo-router sync
+  ```
 
 - **UI Not Updating:**  
-  If you don’t see your changes, restart the Expo server with `npx expo start -c`.
+  Restart Expo with:
+  ```bash
+  npx expo start -c
+  ```
 
 - **Font Issues:**  
-  If using custom fonts, confirm they’re properly loaded before rendering your app. Check the Expo documentation for [using custom fonts](https://docs.expo.dev/guides/using-custom-fonts/).
+  If using custom fonts, confirm they’re properly loaded before rendering the app. [Using Custom Fonts](https://docs.expo.dev/guides/using-custom-fonts/)
 
+- **Python Dependency Issues:**  
+  Ensure Python 3 is installed, create and activate a virtual environment, then install dependencies:
+  ```bash
+  python3 -m venv venv
+  source venv/bin/activate  # On macOS/Linux
+  venv\Scripts\activate     # On Windows
+  pip install -r requirements.txt
+  ```
+
+---
 
 Enjoy building Remembra and personalizing the music therapy experience!
 
