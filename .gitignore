@@ -1,0 +1,7 @@
+/ai/venv/
+/backend/node_modules/
+/frontend/music-therapy-app/
+**/node_modules
+**/package.json
+**/package-lock.json
+**/app.json
