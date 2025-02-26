@@ -13,7 +13,7 @@ Remembra is a multi-screen music therapy application built with Expo, React Nati
 
 ## Folder Structure
 
-The core files are organized under the `app/(tabs)` folder. For example:
+The core frontend files are organized under the `frontend/music-therapy-app/app/(tabs)` folder. For example:
 
 ```
 remembra/
