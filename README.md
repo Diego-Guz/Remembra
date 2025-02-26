@@ -17,30 +17,31 @@ The core files are organized under the `app/(tabs)` folder. For example:
 
 ```
 remembra/
-├── music-therapy-app/
-│   ├── app/
-│   │   └── (tabs)/
-│   │       ├── _layout.tsx             
-│   │       ├── index.tsx              
-│   │       ├── simple-setup/
-│   │       │   └── index.tsx            
-│   │       ├── advanced/
-│   │       │   ├── tell-us-about-yourself.tsx
-│   │       │   ├── music-filled-home.tsx
-│   │       │   ├── music-scene.tsx
-│   │       │   ├── music-memories.tsx
-│   │       │   └── did-we-miss-something.tsx
-│   │       ├── fine-tune.tsx
-│   │       ├── my-profile.tsx
-│   │       ├── main-player.tsx
-│   │       ├── my-library.tsx
-│   │       ├── settings.tsx
-│   │       ├── account.tsx
-│   │       └── explore.tsx
-│   ├── package.json
-│   ├── requirements.txt
-│   ├── README.md
-│   ├── package-lock.json
+├── frontend/
+│   ├── music-therapy-app/
+│   │   ├── app/
+│   │   │   └── (tabs)/
+│   │   │       ├── _layout.tsx              
+│   │   │       ├── index.tsx              
+│   │   │       ├── simple-setup/
+│   │   │       │   └── index.tsx           
+│   │   │       ├── advanced/
+│   │   │       │   ├── tell-us-about-yourself.tsx
+│   │   │       │   ├── music-filled-home.tsx
+│   │   │       │   ├── music-scene.tsx
+│   │   │       │   ├── music-memories.tsx
+│   │   │       │   └── did-we-miss-something.tsx
+│   │   │       ├── fine-tune.tsx
+│   │   │       ├── my-profile.tsx
+│   │   │       ├── main-player.tsx
+│   │   │       ├── my-library.tsx
+│   │   │       ├── settings.tsx
+│   │   │       ├── account.tsx
+│   │   │       └── explore.tsx
+│   │   ├── package.json
+│   │   ├── package-lock.json
+│   │   ├── requirements.txt
+│   │   └── README.md
 ```
 
 > **Note:** The advanced wizard screens are in `app/(tabs)/advanced/`, and the shared pastel styles are in `app/(tabs)/styles.ts`.
