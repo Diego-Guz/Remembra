@@ -1,15 +1,15 @@
 import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import { useRouter } from 'expo-router';
-import { pastelStyles } from './styles';
+import { pastelStyles } from '../../(tabs)/styles';
 
-export default function Explore() {
+export default function SongDetail() {
   const router = useRouter();
 
   return (
     <View style={pastelStyles.container}>
-      <Text style={pastelStyles.title}>Explore</Text>
-      <Text style={pastelStyles.body}>Discover new music, playlists, or memory-based suggestions.</Text>
+      <Text style={pastelStyles.title}>Song Detail</Text>
+      <Text style={pastelStyles.body}>Show info about a specific song here...</Text>
 
       <TouchableOpacity
         style={pastelStyles.navButton}

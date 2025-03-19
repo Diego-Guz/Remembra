@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity } from 'react-native';
 import { useRouter } from 'expo-router';
-import { pastelStyles } from '../styles'; // From simple-setup folder, go up one level to (tabs)
+import { pastelStyles } from '../../(tabs)/styles'; // From simple-setup folder, go up one level to (tabs)
 
 export default function SimpleSetup() {
   const router = useRouter();

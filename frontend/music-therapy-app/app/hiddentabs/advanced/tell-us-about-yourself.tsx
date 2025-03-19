@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity } from 'react-native';
 import { useRouter } from 'expo-router';
-import { pastelStyles } from '../styles';
+import { pastelStyles } from '../../(tabs)/styles';
 
 export default function TellUsAboutYourself() {
   const router = useRouter();
@@ -41,7 +41,7 @@ export default function TellUsAboutYourself() {
         <TouchableOpacity style={pastelStyles.navButton} onPress={() => router.back()}>
           <Text style={pastelStyles.navButtonText}>Back</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={pastelStyles.navButton} onPress={() => router.push('/(tabs)/advanced/music-filled-home')}>
+        <TouchableOpacity style={pastelStyles.navButton} onPress={() => router.push('/hiddentabs/advanced/music-filled-home')}>
           <Text style={pastelStyles.navButtonText}>Next</Text>
         </TouchableOpacity>
       </View>

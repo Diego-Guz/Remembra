@@ -75,4 +75,13 @@ export const pastelStyles = StyleSheet.create({
     fontSize: 16,
     fontWeight: 'bold',
   },
+  forgotText: {
+    color: '#C71585',
+    marginTop: 10,
+    textDecorationLine: 'underline',
+  },
+  signupText: {
+    color: '#C71585',
+    marginTop: 10,
+  }
 });

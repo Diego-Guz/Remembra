@@ -1,28 +1,23 @@
-// app/(tabs)/index.tsx
 import React from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import { useRouter } from 'expo-router';
 import { pastelStyles } from './styles';
 
-export default function LandingScreen() {
+export default function HomeScreen() {
   const router = useRouter();
 
   return (
     <View style={pastelStyles.container}>
-      <Text style={pastelStyles.title}>Remembra</Text>
+      <Text style={pastelStyles.title}>Welcome to Remembra</Text>
+      <Text style={pastelStyles.body}>
+      Tap the button below to begin your music therapy journey!
+      </Text>
 
       <TouchableOpacity
-        style={pastelStyles.navButton}
-        onPress={() => router.push('/(tabs)/simple-setup')}
+        style={pastelStyles.button}
+        onPress={() => router.push('../login')}
       >
-        <Text style={pastelStyles.navButtonText}>Simple Set-Up</Text>
-      </TouchableOpacity>
-
-      <TouchableOpacity
-        style={pastelStyles.navButton}
-        onPress={() => router.push('/(tabs)/advanced/welcome')}
-      >
-        <Text style={pastelStyles.navButtonText}>Advanced Set-Up</Text>
+        <Text style={pastelStyles.buttonText}>Login</Text>
       </TouchableOpacity>
     </View>
   );

@@ -1,38 +1,39 @@
+// app/(tabs)/advanced/music-scene.tsx
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity } from 'react-native';
 import { useRouter } from 'expo-router';
-import { pastelStyles } from '../styles'; // One folder up from advanced
+import { pastelStyles } from '../../(tabs)/styles';
 
-export default function MusicMemories() {
+export default function MusicScene() {
   const router = useRouter();
-  const [meaningfulMusic, setMeaningfulMusic] = useState('');
-  const [importantMoments, setImportantMoments] = useState('');
+  const [socialGroup, setSocialGroup] = useState('');
+  const [musicScenes, setMusicScenes] = useState('');
 
   return (
     <View style={pastelStyles.container}>
-      <Text style={pastelStyles.title}>Music & Memories</Text>
+      <Text style={pastelStyles.title}>What Was Your Scene?</Text>
       <Text style={pastelStyles.body}>
-        Certain songs are part of our life story. Share albums, artists, or songs that hold deep meaning, and any memorable moments.
+        Music and identity are intertwined. Describe your social circle and any music scenes you connected with during your younger years.
       </Text>
       <TextInput
         style={pastelStyles.input}
-        placeholder="Albums/Artists/Songs that matter"
+        placeholder="Describe your social group"
         placeholderTextColor="#999"
-        value={meaningfulMusic}
-        onChangeText={setMeaningfulMusic}
+        value={socialGroup}
+        onChangeText={setSocialGroup}
       />
       <TextInput
         style={pastelStyles.input}
-        placeholder="Important moments/memories"
+        placeholder="Music scenes you connected with"
         placeholderTextColor="#999"
-        value={importantMoments}
-        onChangeText={setImportantMoments}
+        value={musicScenes}
+        onChangeText={setMusicScenes}
       />
       <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
         <TouchableOpacity style={pastelStyles.navButton} onPress={() => router.back()}>
           <Text style={pastelStyles.navButtonText}>Back</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={pastelStyles.navButton} onPress={() => router.push('/(tabs)/advanced/did-we-miss-something')}>
+        <TouchableOpacity style={pastelStyles.navButton} onPress={() => router.push('/hiddentabs/advanced/music-memories')}>
           <Text style={pastelStyles.navButtonText}>Next</Text>
         </TouchableOpacity>
       </View>

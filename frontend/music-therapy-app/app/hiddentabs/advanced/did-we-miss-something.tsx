@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity } from 'react-native';
 import { useRouter } from 'expo-router';
-import { pastelStyles } from '../styles';
+import { pastelStyles } from '../../(tabs)/styles';
 
 export default function DidWeMissSomething() {
   const router = useRouter();
